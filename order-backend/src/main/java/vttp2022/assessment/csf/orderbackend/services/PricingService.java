@@ -44,7 +44,7 @@ public class PricingService {
 	}
 
 	public Float topping(String toppingType) {
-		return toppings.getOrDefault(toppingType.trim().toLowerCase(), -1000f);
+		return toppings.getOrDefault(toppingType, -1000f);
 	}
 
 	public Float thickCrust() {

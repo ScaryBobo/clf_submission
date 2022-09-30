@@ -1,0 +1,16 @@
+<table class="table">
+    
+    <tbody *ngFor="let order of orderList; let idx =index">
+        <tr>
+            <td>Orders for :{{order.email}} </td>
+        </tr>
+        <tr>
+            <td>Order Id: {{order.orderId}} </td>    
+        </tr>
+        <tr> 
+            <td>Amount: {{order.amount}} </td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" routerLink="['/']">Back</button>
+
