@@ -13,8 +13,8 @@
       <tr>
         <td> <label for="email">Email:</label> </td>
         <td>
-          <input type="email" size="50" id="email" placeholder="Your LumiNUS email" formControlName="email">
-          <button type="button" class="ml-10px" [disabled]="!orderForm.get('email')?.hasError('email')" (click) = "findOrder()">
+          <input type="email" size="50" id="email" placeholder="Your LumiNUS email" formControlName="email" [(ngModel)]="userEmail">
+          <button type="button" class="ml-10px" [disabled]="orderForm.get('email')?.hasError('required')" (click) = "findOrder()">
             List Orders
           </button>
         </td>

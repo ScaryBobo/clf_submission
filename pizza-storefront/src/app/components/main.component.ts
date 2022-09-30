@@ -54,10 +54,13 @@ export class MainComponent implements OnInit {
     this.pizzaSize = SIZES[parseInt(size)]
   }
 
+
+  userEmail : string = ''
  
-  findOrder(){
-
-
+  async findOrder(){
+    console.log ("email >>>>> : ", this.userEmail);
+    await this.pizzaSvc.getOrders(this.userEmail);
+    this.router.navigate(['/order', this.userEmail]);
   }
 
   async processForm(){
@@ -113,15 +116,5 @@ export class MainComponent implements OnInit {
   argula !: boolean;
   pineapple !: boolean;
 
-
-
-
-
-
-
-
-
-
-  
 
 }
